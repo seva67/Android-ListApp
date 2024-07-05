@@ -8,12 +8,148 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/ic_launcher_background"
+        android:gravity="center"
         android:text="Hello World!"
+        android:textSize="34sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <RadioButton
+        android:id="@+id/radioButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:checked="true"
+        android:onClick="onClickRB"
+        android:text="t1"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/radioButton4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:onClick="onClickRB"
+        android:text="tttttt2"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/radioButton1"
+        app:layout_constraintTop_toBottomOf="@+id/radioButton1" />
+
+    <RadioButton
+        android:id="@+id/radioButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:onClick="onClickRB"
+        android:text="ttt3"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/radioButton2"
+        app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
+
+    <RadioButton
+        android:id="@+id/radioButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:onClick="onClickRB"
+        android:text="ttttttttt4"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/radioButton1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/radioButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:onClick="onClickRB"
+        android:text="tt5"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/radioButton4"
+        app:layout_constraintTop_toBottomOf="@+id/radioButton4" />
+
+    <RadioButton
+        android:id="@+id/radioButton6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:onClick="onClickRB"
+        android:text="ttt6"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/radioButton5"
+        app:layout_constraintTop_toBottomOf="@+id/radioButton5" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_launcher_background"
+        app:constraint_referenced_ids="radioButton1,radioButton2,radioButton3,radioButton4,radioButton5,radioButton6"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.876"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.764"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_constraintCircle="@id/floatingActionButton"
+        app:layout_constraintCircleAngle="315"
+        app:layout_constraintCircleRadius="100dp"
+        tools:layout_editor_absoluteX="232dp"
+        tools:layout_editor_absoluteY="485dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_constraintCircle="@id/floatingActionButton"
+        app:layout_constraintCircleAngle="0"
+        app:layout_constraintCircleRadius="100dp"
+        tools:layout_editor_absoluteX="311dp"
+        tools:layout_editor_absoluteY="448dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_constraintCircle="@id/floatingActionButton"
+        app:layout_constraintCircleAngle="270"
+        app:layout_constraintCircleRadius="100dp"
+        tools:layout_editor_absoluteX="151dp"
+        tools:layout_editor_absoluteY="568dp"
+        tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
